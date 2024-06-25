@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: "Nunito";
-    src: url("../fonts/Nunito-VariableFont_wght.ttf") format("ttf");
-  }
-
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
