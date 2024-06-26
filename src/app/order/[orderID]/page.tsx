@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 
 export default function OrderDetails() {
   const order = {
@@ -20,10 +21,20 @@ export default function OrderDetails() {
       <p className="text-gray-700 mb-2">
         <span className="font-semibold">Quantity:</span> {order.quantity}
       </p>
-      <p className="text-gray-700">
-        <span className="font-semibold">Status:</span>{" "}
-        <Badge variant="default">{order.status}</Badge>
-      </p>
+      <div className="text-gray-700 flex items-center">
+        <span className="font-semibold">Status:</span>
+        <Badge variant="default" className="ml-4">
+          {order.status}
+        </Badge>
+      </div>
+
+      <hr className="my-6" />
+
+      <div className="flex justify-end items-center">
+        <Button variant="destructive" size="sm">
+          Delete Order
+        </Button>
+      </div>
     </div>
   );
 }
