@@ -27,7 +27,7 @@ export default function OrderForm({ onSubmit, existingOrder }: OrderFormProps) {
   };
 
   return (
-    <Card className="w-full">
+    <Card className="w-full bg-gray-darker border border-gray-lighter text-white">
       <CardHeader>
         <CardTitle>Place Order</CardTitle>
       </CardHeader>

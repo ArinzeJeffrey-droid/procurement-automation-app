@@ -27,16 +27,20 @@ export default function OrderList({ orders, deleteOrder }: OrderListProps) {
     <Table>
       <TableCaption>A list of your orders</TableCaption>
       <TableHeader>
-        <TableRow>
+        <TableRow className="border-gray-lightest">
           <TableHead className="w-[100px]">Order ID</TableHead>
           <TableHead>Item Name</TableHead>
           <TableHead>Quantity</TableHead>
           <TableHead className="text-right">Status</TableHead>
+          <TableHead className="text-right"></TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
         {orders.map((order) => (
-          <TableRow key={order.id}>
+          <TableRow
+            key={order.id}
+            className="text-white border-gray-lightest hover:opacity-75"
+          >
             <TableCell className="font-medium">{order.id}</TableCell>
             <TableCell>{order.itemName}</TableCell>
             <TableCell>{order.quantity}</TableCell>
