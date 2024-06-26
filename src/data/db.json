@@ -1,0 +1,32 @@
+[
+  {
+    "id": "ORD-002",
+    "itemName": "Chocolate Cake",
+    "quantity": 1,
+    "status": "Delivered"
+  },
+  {
+    "id": "ORD-003",
+    "itemName": "Vanilla Cake",
+    "quantity": 3,
+    "status": "Pending"
+  },
+  {
+    "id": "ORD-004",
+    "itemName": "Strawberry Cake",
+    "quantity": 1,
+    "status": "Pending"
+  },
+  {
+    "id": "ORD-005",
+    "itemName": "Blueberry Cake",
+    "quantity": 2,
+    "status": "Delivered"
+  },
+  {
+    "id": "ORD-100",
+    "itemName": "Pizza",
+    "quantity": 2,
+    "status": "Delivered"
+  }
+]
