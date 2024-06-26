@@ -1,6 +1,6 @@
 "use client";
 import OrderList from "@/components/OrderList";
-import { useDeleteOrder, useOrders } from "./api/queries";
+import { useDeleteOrder, useOrders } from "./api/queries/order";
 import Loading from "@/components/Loading";
 import Error from "@/components/Error";
 import { toast } from "sonner";

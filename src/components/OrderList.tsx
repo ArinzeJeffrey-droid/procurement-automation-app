@@ -12,7 +12,7 @@ import { Order, OrderStatus } from "@/__types__/order";
 import Link from "next/link";
 import { Button } from "./ui/button";
 
-interface OrderListProps {
+export interface OrderListProps {
   orders: Order[];
   deleteOrder: (orderID: string) => void;
 }

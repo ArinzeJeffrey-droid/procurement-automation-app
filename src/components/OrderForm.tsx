@@ -6,12 +6,12 @@ import { Label } from "@/components/ui/label";
 import generateOrderId from "@/lib/generateOrderId";
 import { useState } from "react";
 
-interface OrderFormProps {
+export interface OrderFormProps {
   onSubmit: (order: Order) => void;
   existingOrder?: Order;
 }
 
-export function OrderForm({ onSubmit, existingOrder }: OrderFormProps) {
+export default function OrderForm({ onSubmit, existingOrder }: OrderFormProps) {
   const [order, setOrder] = useState<Order>(
     existingOrder || {
       id: generateOrderId(),

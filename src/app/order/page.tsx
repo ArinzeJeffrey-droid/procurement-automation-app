@@ -1,6 +1,6 @@
 "use client";
-import { OrderForm } from "@/components/OrderForm";
-import { useCreateOrder } from "../api/queries";
+import OrderForm from "@/components/OrderForm";
+import { useCreateOrder } from "../api/queries/order";
 import { Order } from "@/__types__/order";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
