@@ -34,7 +34,7 @@ export default function OrderDetail({ order, deleteOrder }: OrderDetailProps) {
         <Button variant="outline" size="sm" asChild>
           <Link href={`/order/${order.id}/edit`}>Edit Order</Link>
         </Button>
-        <Button variant="destructive" size="sm">
+        <Button variant="destructive" size="sm" onClick={deleteOrder}>
           Delete Order
         </Button>
       </div>
