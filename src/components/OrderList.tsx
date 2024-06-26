@@ -30,7 +30,6 @@ export default function OrderList({ orders }: OrderListProps) {
           <TableHead>Item Name</TableHead>
           <TableHead>Quantity</TableHead>
           <TableHead className="text-right">Status</TableHead>
-          <TableHead className="text-right"></TableHead>
         </TableRow>
       </TableHeader>
       <TableBody>
@@ -45,7 +44,8 @@ export default function OrderList({ orders }: OrderListProps) {
               </Badge>
             </TableCell>
             <TableCell className="text-right">
-              <Link href={`/order/${order.id}`}>View order</Link>
+              <Link href={`/order/${order.id}`} className="mr-4">View</Link>
+              <Link href={`/order/${order.id}/edit`}>Edit</Link>
             </TableCell>
           </TableRow>
         ))}

@@ -1,5 +1,3 @@
-import { Button } from "./ui/button";
-
 interface NavbarProps {
   toggleSidebar: () => void;
 }
@@ -26,7 +24,6 @@ export default function Navbar({ toggleSidebar }: NavbarProps) {
         </button>
         <h1 className="text-xl font-bold ml-4">Procurement Automation App</h1>
       </div>
-      <Button>Button</Button>
     </header>
   );
 }
