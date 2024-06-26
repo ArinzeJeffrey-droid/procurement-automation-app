@@ -64,7 +64,7 @@ export function OrderForm({ onSubmit, existingOrder }: OrderFormProps) {
             </div>
           </div>
           <div className="flex justify-end">
-            <Button>Place order</Button>
+            <Button>{order ? "Edit order" : "Place order"}</Button>
           </div>
         </form>
       </CardContent>
