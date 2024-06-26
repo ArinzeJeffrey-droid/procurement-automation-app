@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner"
 import Layout from "@/components/Layout";
 import QueryProvider from "@/providers/QueryProvider";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
         <QueryProvider>
           <Layout>{children}</Layout>
         </QueryProvider>
+        <Toaster />
       </body>
     </html>
   );

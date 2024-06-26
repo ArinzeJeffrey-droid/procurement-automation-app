@@ -10,9 +10,11 @@ import {
 import { Badge } from "./ui/badge";
 import { Order, OrderStatus } from "@/__types__/order";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 interface OrderListProps {
   orders: Order[];
+  deleteOrder: (orderID: string) => void;
 }
 
 const orderStatusClasses: Record<OrderStatus, "default" | "destructive"> = {
@@ -20,7 +22,7 @@ const orderStatusClasses: Record<OrderStatus, "default" | "destructive"> = {
   Pending: "destructive",
 };
 
-export default function OrderList({ orders }: OrderListProps) {
+export default function OrderList({ orders, deleteOrder }: OrderListProps) {
   return (
     <Table>
       <TableCaption>A list of your orders</TableCaption>
@@ -44,8 +46,17 @@ export default function OrderList({ orders }: OrderListProps) {
               </Badge>
             </TableCell>
             <TableCell className="text-right">
-              <Link href={`/order/${order.id}`} className="mr-4">View</Link>
+              <Link href={`/order/${order.id}`} className="mr-4">
+                View
+              </Link>
               <Link href={`/order/${order.id}/edit`}>Edit</Link>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => deleteOrder(order.id)}
+              >
+                Delete
+              </Button>
             </TableCell>
           </TableRow>
         ))}
