@@ -12,7 +12,7 @@ const sidebarLinks = [
   },
   {
     name: "Create Order",
-    href: "/orders/create",
+    href: "/order",
   },
 ];
 
