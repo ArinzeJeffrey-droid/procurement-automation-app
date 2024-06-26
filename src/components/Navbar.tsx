@@ -4,7 +4,7 @@ interface NavbarProps {
 
 export default function Navbar({ toggleSidebar }: NavbarProps) {
   return (
-    <header className="bg-white shadow-md p-4 flex justify-between items-center">
+    <header className="bg-gray-darker text-white border-b border-gray-lighter p-4 flex justify-between items-center">
       <div className="flex items-center">
         <button className="text-gray-800 md:hidden" onClick={toggleSidebar}>
           <svg

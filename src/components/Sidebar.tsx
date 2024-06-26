@@ -20,7 +20,7 @@ export default function Sidebar({ isSidebarOpen }: SidebarProps) {
   return (
     <aside
       className={cn(
-        "fixed inset-y-0 left-0 w-64 bg-gray-800 text-white transform md:relative md:translate-x-0 transition-transform duration-200 ease-in-out z-30",
+        "fixed inset-y-0 left-0 w-64 bg-gray-darker border-r border-gray-lighter text-white transform md:relative md:translate-x-0 transition-transform duration-200 ease-in-out z-30",
         isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       )}
     >
@@ -30,8 +30,10 @@ export default function Sidebar({ isSidebarOpen }: SidebarProps) {
       <nav>
         <ul>
           {sidebarLinks.map((link) => (
-            <li key={link.href} className="p-4 hover:bg-gray-700">
-              <Link href={link.href}>{link.name}</Link>
+            <li key={link.href} className="hover:bg-gray">
+              <Link href={link.href} legacyBehavior>
+                <a className="block p-4">{link.name}</a>
+              </Link>
             </li>
           ))}
         </ul>
