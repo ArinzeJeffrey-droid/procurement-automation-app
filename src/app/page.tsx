@@ -1,43 +1,18 @@
-import { Order } from "@/__types__/order";
+"use client";
 import OrderList from "@/components/OrderList";
-
-const orders: Order[] = [
-  {
-    id: "ORD-001",
-    itemName: "Carrot Cake",
-    quantity: 2,
-    status: "Delivered",
-  },
-  {
-    id: "ORD-002",
-    itemName: "Chocolate Cake",
-    quantity: 1,
-    status: "Pending",
-  },
-  {
-    id: "ORD-003",
-    itemName: "Cheese Cake",
-    quantity: 3,
-    status: "Delivered",
-  },
-  {
-    id: "ORD-004",
-    itemName: "Fruit Cake",
-    quantity: 1,
-    status: "Pending",
-  },
-  {
-    id: "ORD-005",
-    itemName: "Red Velvet Cake",
-    quantity: 2,
-    status: "Delivered",
-  },
-];
+import { useOrders } from "./api/queries";
+import Loading from "@/components/Loading";
+import Error from "@/components/Error";
 
 export default function Home() {
+  const { data, isLoading, error } = useOrders();
+
+  if (isLoading) return <Loading />;
+  if (error) return <Error />;
+
   return (
     <main>
-      <OrderList orders={orders} />
+      <OrderList orders={data.orders} />
     </main>
   );
 }
