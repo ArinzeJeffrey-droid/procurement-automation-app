@@ -26,7 +26,11 @@ export default function Home() {
 
   return (
     <main>
-      <OrderList orders={data.orders} deleteOrder={handleDeleteOrder} />
+      {data.orders.length === 0 ? (
+        <h1 className="text-center text-white">No orders found</h1>
+      ) : (
+        <OrderList orders={data.orders} deleteOrder={handleDeleteOrder} />
+      )}
     </main>
   );
 }
