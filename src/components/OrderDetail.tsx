@@ -3,7 +3,7 @@ import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 import Link from "next/link";
 
-interface OrderDetailProps {
+export interface OrderDetailProps {
   order: Order;
   deleteOrder: () => void;
 }

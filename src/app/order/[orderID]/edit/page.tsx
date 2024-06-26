@@ -1,9 +1,9 @@
 "use client";
 import { Order } from "@/__types__/order";
-import { useOrder, useUpdateOrder } from "@/app/api/queries";
+import { useOrder, useUpdateOrder } from "@/app/api/queries/order";
 import Error from "@/components/Error";
 import Loading from "@/components/Loading";
-import { OrderForm } from "@/components/OrderForm";
+import OrderForm from "@/components/OrderForm";
 import { useParams, useRouter } from "next/navigation";
 import { toast } from "sonner";
 
